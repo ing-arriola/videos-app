@@ -1,0 +1,7 @@
+.hover {
+  cursor: pointer;
+}
+
+.hover :hover {
+  background: rgba(233, 230, 230, 0.87);
+}
