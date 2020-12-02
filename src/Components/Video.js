@@ -12,7 +12,7 @@ const Video = ({ video, onVideoSelection }) => {
           alt="Generic placeholder"
         />
         <Media.Body className="mx-auto my-auto">
-          <p>{video.snippet.title}</p>
+          <p>{unescape(video.snippet.title)}</p>
         </Media.Body>
       </Media>
     </ListGroup.Item>
