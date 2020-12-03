@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Media, ListGroup } from "react-bootstrap";
+import { Container, Media, ListGroup } from "react-bootstrap";
 const Video = ({ video, onVideoSelection }) => {
   const videoRendered = (
     <ListGroup.Item className="hover" onClick={() => onVideoSelection(video)}>

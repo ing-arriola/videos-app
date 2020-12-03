@@ -11,17 +11,14 @@ const Search = ({ onSumbmit }) => {
   };
 
   return (
-    <Container className="py-4">
-      <Form onSubmit={onFormSubmit}>
-        <Form.Label>Search</Form.Label>
-        <Form.Control
-          onChange={(e) => setTerm(e.target.value)}
-          value={term}
-          type="text"
-          placeholder="search a video"
-        />
-      </Form>
-    </Container>
+    <Form onSubmit={onFormSubmit}>
+      <Form.Control
+        onChange={(e) => setTerm(e.target.value)}
+        value={term}
+        type="text"
+        placeholder="search a video"
+      />
+    </Form>
   );
 };
 

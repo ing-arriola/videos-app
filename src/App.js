@@ -6,6 +6,7 @@ import Api from "./Components/Api";
 import VideoList from "./Components/VideoList";
 import VideoDetail from "./Components/VideoDetail";
 import { Container, Col, Row } from "react-bootstrap";
+import NavigationBar from "./Components/NavigationBar";
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -16,7 +17,6 @@ function App() {
   }, []);
 
   const onVideoSelection = (video) => {
-    console.log("from app", video);
     setSelectedVideo(video);
   };
 
@@ -37,8 +37,9 @@ function App() {
   return (
     <div className="App">
       <Container>
-        <Search onSumbmit={onTermSubmit} />
-        <Row>
+        <NavigationBar onTermSubmit={onTermSubmit} />
+
+        <Row className="mt-5 pt-5 ">
           {selectedVideo ? (
             <Col className="lg-7 mb-4">
               <VideoDetail videoInfo={selectedVideo} />
