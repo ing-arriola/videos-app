@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button, Col } from "react-bootstrap";
 import { useState } from "react";
 
 const Search = ({ onSumbmit }) => {
@@ -11,14 +11,17 @@ const Search = ({ onSumbmit }) => {
   };
 
   return (
-    <Form onSubmit={onFormSubmit}>
-      <Form.Control
-        onChange={(e) => setTerm(e.target.value)}
-        value={term}
-        type="text"
-        placeholder="search a video"
-      />
-    </Form>
+    <Col>
+      <Form onSubmit={onFormSubmit}>
+        <Form.Control
+          className="mr-4"
+          onChange={(e) => setTerm(e.target.value)}
+          value={term}
+          type="text"
+          placeholder="Enter a search and hit enter"
+        />
+      </Form>
+    </Col>
   );
 };
 

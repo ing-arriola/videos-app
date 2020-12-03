@@ -5,12 +5,12 @@ const useVideos = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    search("react redux");
+    search("jaime javier arriola suarez ");
   }, []);
 
   const search = async (term) => {
     if (!term) {
-      term = "react redux";
+      term = "jaime javier arriola suarez";
     }
     const response = await Api.get("/search", {
       params: {

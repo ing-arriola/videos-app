@@ -2,7 +2,10 @@ import React from "react";
 import { Container, Media, ListGroup } from "react-bootstrap";
 const Video = ({ video, onVideoSelection }) => {
   const videoRendered = (
-    <ListGroup.Item className="hover" onClick={() => onVideoSelection(video)}>
+    <ListGroup.Item
+      className="hover shadow-sm bg-white rounded "
+      onClick={() => onVideoSelection(video)}
+    >
       <Media className="py-3">
         <img
           width={160}

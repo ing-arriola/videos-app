@@ -11,6 +11,11 @@ function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, onTermSubmit] = useVideo();
 
+  const setAndScroll = (video) => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setSelectedVideo(video);
+  };
+
   useEffect(() => {
     setSelectedVideo("");
   }, [videos]);
@@ -29,7 +34,7 @@ function App() {
             ""
           )}
           <Col className={`${selectedVideo} ? lg-5:''`}>
-            <VideoList onVideoSelection={setSelectedVideo} items={videos} />
+            <VideoList onVideoSelection={setAndScroll} items={videos} />
           </Col>
         </Row>
       </Container>

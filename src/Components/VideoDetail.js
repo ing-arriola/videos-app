@@ -2,10 +2,9 @@ import React from "react";
 import { Container, Card } from "react-bootstrap";
 
 const VideoDetail = ({ videoInfo }) => {
-  console.log(videoInfo);
   return (
-    <Container>
-      <Card className="p-4  ">
+    <Container id="player">
+      <Card className="p-4">
         <h4>{unescape(videoInfo.snippet.title)}</h4>
         <iframe
           width="560"
@@ -14,6 +13,7 @@ const VideoDetail = ({ videoInfo }) => {
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
+          className="align-self-center"
         ></iframe>
         <p className="pt-4">{videoInfo.snippet.description}</p>
       </Card>
